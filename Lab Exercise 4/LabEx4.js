@@ -20,7 +20,7 @@ console.log(x + " * " + y + " = " + Multiply(x, y));
 console.log(x + " / " + y + " = " + Divide(x, y));
 
 function Name(name) {
-  console.log(`Hello ${name}!`);
+  return `Hello ${name}!`;
 }
 
-Name("Peter");
+console.log(Name("Peter"));

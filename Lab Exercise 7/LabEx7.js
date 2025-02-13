@@ -5,80 +5,95 @@ function Add(a, b) {
 
 // Addition tests
 function AddTests() {
-  if (AddTest(5, 6) !== 11) {
+  if (Add(5, 6) !== 11) {
     throw new Error("Addition test 1 failed");
   }
-  if (AddTest(-7, -3) !== -10) {
+  if (Add(-7, -3) !== -10) {
     throw new Error("Addition test 2 failed");
   }
-  if (AddTest(6.07, 8.4) !== 14.47) {
+  if (Add(6.07, 8.4) !== 14.47) {
     throw new Error("Addition test 3 failed");
   }
 }
 
 // This function returns the subtraction of two numbers
-function SubtractTest(a, b) {}
-
 function Subtract(a, b) {
   return a - b;
 }
 
 // Subtraction tests
-function SubtractionTests() {
-  if (Subtract(5, 6) !== 11) {
-    throw new Error("Addition test 1 failed");
+function SubtractTests() {
+  if (Subtract(17, 5) !== 12) {
+    throw new Error("Subtraction test 1 failed");
   }
-  if (Subtract(-7, -3) !== -10) {
-    throw new Error("Addition test 2 failed");
+  if (Subtract(-3, -5) !== 2) {
+    throw new Error("Subtraction test 2 failed");
   }
-  if (Subtract(6.07, 8.4) !== 14.47) {
-    throw new Error("Addition test 3 failed");
+  if (Subtract(9.6, 2.5) !== 7.1) {
+    throw new Error("Subtraction test 3 failed");
   }
 }
 
 // This function returns the multiplication of two numbers
-function MultiplyTest(a, b) {}
-
 function Multiply(a, b) {
   return a * b;
 }
 
 // Multiplication tests
-function AddTests() {
-  if (AddTest(5, 6) !== 11) {
-    throw new Error("Addition test 1 failed");
+function MultiplyTests() {
+  if (Multiply(4, 7) !== 28) {
+    throw new Error("Multiplication test 1 failed");
   }
-  if (AddTest(-7, -3) !== -10) {
-    throw new Error("Addition test 2 failed");
+  if (Multiply(-9, 6) !== -54) {
+    throw new Error("Multiplication test 2 failed");
   }
-  if (AddTest(6.07, 8.4) !== 14.47) {
-    throw new Error("Addition test 3 failed");
+  if (Multiply(6.84, 5.5) !== 37.62) {
+    throw new Error("Multiplication test 3 failed");
   }
 }
 
 // This function returns the division of two numbers
-function DivideTest(a, b) {}
-
 function Divide(a, b) {
   return a / b;
 }
 
 // Division tests
-function AddTests() {
-  if (AddTest(5, 6) !== 11) {
-    throw new Error("Addition test 1 failed");
+function DivideTests() {
+  if (Divide(40, 8) !== 5) {
+    throw new Error("Division test 1 failed");
   }
-  if (AddTest(-7, -3) !== -10) {
-    throw new Error("Addition test 2 failed");
+  if (Divide(-48, 3) !== -16) {
+    throw new Error("Division test 2 failed");
   }
-  if (AddTest(6.07, 8.4) !== 14.47) {
-    throw new Error("Addition test 3 failed");
+  if (Divide(11, 10) !== 1.1) {
+    throw new Error("Division test 3 failed");
   }
 }
 
-// This function returns the sum of two numbers
+// This function returns a string plus the name variable
 function Name(name) {
-  console.log(`Hello ${name}!`);
+  return `Hello ${name}!`;
 }
 
+// Name tests
+function NameTests() {
+  if (Name("Jake") !== "Hello Jake!") {
+    throw new Error("Name test 1 failed");
+  }
+  if (Name("") !== "Hello !") {
+    throw new Error("Name test 2 failed");
+  }
+  if (Name(null) !== "Hello null!") {
+    throw new Error("Name test 3 failed");
+  }
+  if (Name(undefined) !== "Hello undefined!") {
+    throw new Error("Name test 4 failed");
+  }
+}
+
+AddTests();
+SubtractTests();
+MultiplyTests();
+DivideTests();
+NameTests();
 console.log("All tests successful");
