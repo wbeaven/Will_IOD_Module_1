@@ -3,12 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="LabEx8.css" />
     <script src="LabEx8.js"></script>
     <title>Lab Exercise 8</title>
@@ -16,31 +10,22 @@
 
   <body>
     <div class="column">
-      <h1 style="margin: 10px">Pick a die</h1>
+      <h1 style="margin: 50px 0 40px 0">Pick a die</h1>
+
       <div class="row">
-        <img id="d4" src="d4.png" alt="Four sided die" />
-        <img id="d6" src="d6.png" alt="Six sided die" />
-        <img id="d8" src="d8.png" alt="Eight sided die" />
-        <img id="d10" src="d10.png" alt="Ten sided die" />
-        <img id="d12" src="d12.png" alt="Twelve sided die" />
-        <img id="d20" src="d20.png" alt="Twenty sided die" />
+        <img id="d4" src="d4.png" alt="Four sided die" onclick="getOption(4)" />
+        <img id="d6" src="d6.png" alt="Six sided die" onclick="getOption(6)"/>
+        <img id="d8" src="d8.png" alt="Eight sided die" onclick="getOption(8)"/>
+        <img id="d10" src="d10.png" alt="Ten sided die" onclick="getOption(10)"/>
+        <img id="d12" src="d12.png" alt="Twelve sided die" onclick="getOption(12)"/>
+        <img id="d20" src="d20.png" alt="Twenty sided die" onclick="getOption(20)"/>
       </div>
+
       <div class="columnItem">
-        <label for="dice">Dice type:</label>
-        <select id="dice">
-          <option value="d6">d6</option>
-          <option value="d10">d10</option>
-          <option value="d20">d20</option>
-        </select>
-      </div>
-      <div class="columnItem">
-        <button type="button" onclick="getOption()">Roll dice!</button>
-      </div>
-      <div class="columnItem">
-        <p style="border: 3px solid black">
+        <h1>
           The dice rolled a:
           <span class="output"></span>
-        </p>
+        </h1>
       </div>
     </div>
   </body>
